@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="140" pageHeight="842" columnWidth="100" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3c1f1264-4f10-4432-838f-f01d272e9077">
+	<property name="ireport.zoom" value="3.790852713744709"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="240"/>
+	<parameter name="kode_penjualan" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$F{kode_penjualan}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM `transaksi_jual`
+WHERE kode_penjualan = $P{kode_penjualan}]]>
+	</queryString>
+	<field name="kode_penjualan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_penjualan" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_jasa" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kendaraan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Plat_Nomor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Id_Barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_member" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="tanggal_penjualan">
+		<groupExpression><![CDATA[$F{tanggal_penjualan}]]></groupExpression>
+	</group>
+	<group name="jenis_kendaraan">
+		<groupExpression><![CDATA[$F{jenis_kendaraan}]]></groupExpression>
+	</group>
+	<group name="harga_jasa">
+		<groupExpression><![CDATA[$F{harga_jasa}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="13" uuid="972f8eff-74e3-4fff-be5b-7287a9e2a81d"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial Black" size="8"/>
+				</textElement>
+				<text><![CDATA[STRUK PEMBAYARAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="100" height="12" uuid="1503a2a7-54f6-4406-bddc-25d4808f8a10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial Black" size="8"/>
+				</textElement>
+				<text><![CDATA[FORTUNE WASH]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="12" uuid="9ec95a9e-548c-4989-a1b1-2d196e91801a"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Jl. Budi Utomo, Prambon, Nganjuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="11" width="100" height="10" uuid="10fa8bcd-a270-45eb-8487-f6509dbce123"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Tel: 0856-4888-8656]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="202" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="25" height="13" uuid="0642e3b5-b73f-4cd4-8878-c9a83b94c6d7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ ID: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="13" width="25" height="10" uuid="5cd7ef3a-978d-49ca-b0b4-bd4ab2c505f6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ TGL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="23" width="41" height="12" uuid="874e2816-9e4c-4569-9c0b-df24f74cf89f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ Pelanggan:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="42" height="11" uuid="0b19a9fa-2e25-4192-9de5-d9ef40af72b1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ Kendaraan:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="46" width="42" height="11" uuid="fcf889c7-56a8-4ae1-9ac1-bb4c56d9d51c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ Plat No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-4" y="57" width="100" height="13" uuid="b7371572-d66b-4846-828b-9000f00e9e07"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[  DETAIL LAYANAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="70" width="87" height="13" uuid="2810266a-c2ff-4a3c-9fd8-b6d1411ce4b1"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ - Cuci Steam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="84" width="87" height="12" uuid="ee48cc38-84b8-4112-a586-ad55fc08a900"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ - Waxing dan Poles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="97" width="41" height="11" uuid="8a520a00-99a9-47da-9292-fd67b4096a8d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[  HARGA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="109" width="42" height="13" uuid="3ef88f36-f155-498b-a8f5-4f5d4da2a7bf"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[  Status:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="25" y="0" width="75" height="13" uuid="4aba8104-8767-4d09-858a-959a3fb5340c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{kode_penjualan}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="25" y="13" width="75" height="10" uuid="cafc3d45-9dcd-4fde-a83e-902f11453a64"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal_penjualan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="23" width="59" height="12" uuid="8866a501-aeef-4b7f-b972-80b75c1261d5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_member}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="35" width="58" height="12" uuid="a68dc2cc-6fdc-47a1-a104-24a1f311f167"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenis_kendaraan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="47" width="58" height="10" uuid="f98e6d82-5c70-4668-9848-239ae7b06487"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Plat_Nomor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="39" y="96" width="60" height="11" uuid="f891e9e2-7e29-4445-9f46-19b0139c1231"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{harga_jasa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="109" width="60" height="13" uuid="4ff2d643-2617-4618-9988-2c8f1d25c199"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="184" width="99" height="17" uuid="70117aec-6f83-4f1a-9aca-3fa12142031f"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[TOLONG JAGA STRUK INI UNTUK MELAKUKAN PEMBAYARAN ANDA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="172" width="100" height="10" uuid="87a3450f-1aff-4c23-97e8-b8c90e1db8ea"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[TERIMA KASIH TELAH MEMPERCAYAI KAMI!]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="9" y="133" width="76" height="26" uuid="69e9375e-9fc5-47df-abc1-ec2dab1576a9"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" evaluationTime="Report">
+					<jr:codeExpression><![CDATA[$P{kode_penjualan}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
